@@ -1,0 +1,22 @@
+<div>
+  <label for="genero">Gênero:</label>
+  <select class="form-control" id="genero" [(ngModel)]="genero">
+    <option value="m">Masculino</option>
+    <option value="f">Feminino</option>
+  </select>
+</div>
+<div>
+  <label for="peso">Peso (kg):</label>
+  <input type="number" id="peso" [(ngModel)]="peso" class="form-control">
+</div>
+<div>
+  <label for="altura">Altura (cm):</label>
+  <input class="form-control" type="number" id="altura" [(ngModel)]="altura">
+</div>
+<div>
+  <button class="mt-5" (click)="calcularIMC()">Calcular IMC</button>
+</div>
+<div *ngIf="imc">
+  <p>Seu IMC é {{imc | number: '1.1-1'}}</p>
+  <p>Você está classificado como {{classificacao}}</p>
+</div>
