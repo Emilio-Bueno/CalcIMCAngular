@@ -14,9 +14,9 @@
   <input class="form-control" type="number" id="altura" [(ngModel)]="altura">
 </div>
 <div>
-  <button class="mt-5" (click)="calcularIMC()">Calcular IMC</button>
+  <button class="mt-4" (click)="calcularIMC()">Calcular IMC</button>
 </div>
 <div *ngIf="imc">
-  <p>Seu IMC é {{imc | number: '1.1-1'}}</p>
-  <p>Você está classificado como {{classificacao}}</p>
+  <p style="color: white;">Seu IMC é {{imc | number: '1.1-1'}}</p>
+  <p style="color: white;">Você está classificado como {{classificacao}}</p>
 </div>
